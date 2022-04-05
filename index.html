@@ -26,30 +26,34 @@
       <div class="container">
         <div class="row">
           <div class="header">
-            <div class="header-logo">
-              <a href="#">
-                <img
-                  class="logo_img"
-                  src="./assets/images/logo.svg"
-                  alt="TON PETS"
-                />
-              </a>
+            <div class="header-1">
+              <div class="header-logo">
+                <a href="#">
+                  <img
+                    class="logo_img"
+                    src="./assets/images/logo.svg"
+                    alt="TON PETS"
+                  />
+                </a>
+              </div>
             </div>
-            <div class="header-nav">
-              <nav class="navigation">
-                <a class="nav-item main" href="#">Главная</a>
-                <a class="nav-item" href="#">Команда</a>
-                <a class="nav-item" href="#">Дорожная карта</a>
-              </nav>
-            </div>
-            <div class="header-lang">
-              <a class="switch-lang" href="#">
-                <img
-                  class="current-lang"
-                  src="./assets/images/lang_ru.svg"
-                  alt=""
-                />
-              </a>
+            <div class="header-2">
+              <div class="header-nav">
+                <nav class="navigation">
+                  <a class="nav-item main" href="#">Главная</a>
+                  <a class="nav-item" href="#">Команда</a>
+                  <a class="nav-item" href="#">Дорожная карта</a>
+                </nav>
+              </div>
+              <div class="header-lang">
+                <a class="switch-lang" href="#">
+                  <img
+                    class="current-lang"
+                    src="./assets/images/lang_ru.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -60,10 +64,10 @@
         <div class="container">
           <div class="row">
             <div class="main">
-              <div class="col-5">
+              <div class="col-lg-5 col-6">
                 <div class="main-text">
                   <h1 class="main-text-h1">
-                    Криптоискусство, которое помогает животным
+                    Крипто&shy;искусство, которое помогает животным
                   </h1>
                   <h4 class="main-text-h4">
                     Криптоколлекция NFT, деньги с которой отдаются в приюты для
@@ -74,13 +78,34 @@
                   </a>
                 </div>
               </div>
-              <div class="col-7">
+              <div class="col-lg-7 col-6">
                 <div class="main-illustration">
-                  <img
-                    class="illustration-img"
-                    src="./assets/images/main-illustration.png"
-                    alt=""
-                  />
+                  <div class="illustration-grid">
+                    <div class="top-left">
+                      <img
+                        src="./assets/images/main-illustration-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="top-right">
+                      <img
+                        src="./assets/images/main-illustration-2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="bot-left">
+                      <img
+                        src="./assets/images/main-illustration-3.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="bot-right">
+                      <img
+                        src="./assets/images/main-illustration-4.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,11 +211,15 @@
               </div>
               <div class="roadmap-content">
                 <div class="roadmap-block">
-                  <input class="map__switch" id="block-1" type="checkbox" />
+                  <input
+                    class="map__switch"
+                    id="block-1"
+                    type="checkbox"
+                    checked
+                  />
                   <label for="block-1" class="roadmap-block-head-text">
                     Q2 2022: Запуск проекта
                   </label>
-
                   <div class="roadmap-block-content">
                     <ul class="roadmap-block-content-list">
                       <li class="roadmap-block-content-list-item">
@@ -348,7 +377,24 @@
     </main>
     <footer>
       <div class="container">
-        <div class="row">footer</div>
+        <div class="row">
+          <div class="footer">
+            <div class="footer-links">
+              <a href="#" class="footer-link-item">
+                <img src="./assets/images/footer-link-1.svg" alt="" />
+              </a>
+              <a href="#" class="footer-link-item">
+                <img src="./assets/images/footer-link-2.svg" alt="" />
+              </a>
+              <a href="#" class="footer-link-item">
+                <img src="./assets/images/footer-link-3.svg" alt="" />
+              </a>
+              <a href="#" class="footer-link-item">
+                <img src="./assets/images/footer-link-4.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -377,7 +423,7 @@
         breakpoints: {
           // when window width is >= 320px
           320: {
-            slidesPerView: 1,
+            slidesPerView: "auto",
             spaceBetween: 20,
           },
           // when window width is >= 480px
