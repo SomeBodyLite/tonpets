@@ -650,6 +650,10 @@ footer::after {
     width: 95%;
   }
 
+  .team {
+    margin-top: 20px;
+  }
+
   .top-left {
     display: flex;
     justify-content: center;
