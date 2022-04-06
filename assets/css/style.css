@@ -16,6 +16,7 @@ a:focus {
 body {
   background-color: #FFCC49;
   font-family: 'Montserrat';
+  overflow-x: hidden;
 }
 
 footer {
@@ -161,6 +162,16 @@ footer::after {
   background: linear-gradient(103.8deg, #FC9999 9.42%, #FF9263 96.43%);
   box-shadow: 0px 10px 35px rgba(254, 150, 129, 0.41);
   border-radius: 3rem;
+  transition: background 0.4s;
+}
+
+.telegram-button:hover,
+.telegram-button:focus {
+  background: linear-gradient(103.8deg, #FFA2A2 9.42%, #FF9C71 96.43%);
+}
+
+.telegram-button:active {
+  background: linear-gradient(103.8deg, #FF9090 9.42%, #FF8854 96.43%);
 }
 
 .main-illustration {
@@ -704,14 +715,20 @@ footer::after {
   .header-nav {
     display: block;
     position: absolute;
-    top: 85px;
+    top: 112px;
     /* background: #FFCC49; */
-    background: linear-gradient(360deg, #FFCC49 0%, #FFCC49 71.94%, rgba(255, 204, 73, 0) 100%);
-    filter: drop-shadow(0px 9px 17px rgba(0, 0, 0, 0.25));
+    background: linear-gradient(123.38deg, #FBD13F 31.04%, #FFBD3D 69.39%);
+    box-shadow: 0px -10px 40px rgba(222, 182, 80, 0.4),
+      0px 10px 40px #DEB650;
+    border-radius: 25px;
     width: 100%;
     z-index: 1;
     right: -100%;
     transition: all 0.4s ease;
+  }
+
+  .header-nav.open-menu {
+    right: 0;
   }
 
   .header-lang {
@@ -719,11 +736,7 @@ footer::after {
   }
 
   .header-2 {
-    margin-top: 20px;
-  }
-
-  .header-nav.open-menu {
-    right: 0;
+    margin-top: 45px;
   }
 
   .navigation {
@@ -733,7 +746,9 @@ footer::after {
 
   .nav-item {
     margin-right: 0;
+    margin-bottom: 20px;
   }
+
 
   .menu-burger__header {
     position: relative;
@@ -742,10 +757,6 @@ footer::after {
     display: block;
     margin-left: 10px;
     z-index: 2;
-  }
-
-  .fixed-page {
-    overflow: hidden;
   }
 
   .menu-burger__header span,
