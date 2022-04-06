@@ -654,13 +654,16 @@ footer::after {
 
   .header-2 {
     width: 100%;
-    flex-direction: row-reverse;
     justify-content: space-between;
   }
 
   .header-lang {
     margin-left: 0;
   }
+}
+
+.menu-burger__header {
+  display: none;
 }
 
 @media (max-width:576px) {
@@ -671,8 +674,13 @@ footer::after {
     flex-direction: column-reverse;
   }
 
+  .menu-burger__header {
+    display: block;
+  }
+
   .header-2 {
     width: 90%;
+    flex-direction: row-reverse;
   }
 
   .main-text {
