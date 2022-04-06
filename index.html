@@ -38,11 +38,14 @@
               </div>
             </div>
             <div class="header-2">
+              <div class="menu-burger__header">
+                <span></span>
+              </div>
               <div class="header-nav">
                 <nav class="navigation">
-                  <a class="nav-item main" href="#">Главная</a>
-                  <a class="nav-item" href="#">Команда</a>
-                  <a class="nav-item" href="#">Дорожная карта</a>
+                  <a class="nav-item mainv" href="#">Главная</a>
+                  <a class="nav-item" href="#team">Команда</a>
+                  <a class="nav-item" href="#roadmap">Дорожная карта</a>
                 </nav>
               </div>
               <div class="header-lang">
@@ -64,7 +67,7 @@
         <div class="container">
           <div class="row">
             <div class="main">
-              <div class="col-lg-5 col-6">
+              <div class="col-lg-5 col-md-6">
                 <div class="main-text">
                   <h1 class="main-text-h1">
                     Крипто&shy;искусство, которое помогает животным
@@ -78,7 +81,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-lg-7 col-6">
+              <div class="col-lg-7 col-md-6 col-8">
                 <div class="main-illustration">
                   <div class="illustration-grid">
                     <div class="top-left">
@@ -134,7 +137,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <div class="row">
             <div class="our-team">
@@ -197,7 +200,7 @@
           </div>
         </div>
       </section>
-      <section class="roadmap">
+      <section class="roadmap" id="roadmap">
         <div class="container">
           <div class="row">
             <div class="roadmap-main">
@@ -398,6 +401,7 @@
       </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -437,6 +441,20 @@
             spaceBetween: 40,
           },
         },
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".menu-burger__header").click(function () {
+          $(".menu-burger__header").toggleClass("open-menu");
+          $(".header-nav").toggleClass("open-menu");
+          $("body").toggleClass("fixed-page");
+        });
+        $(".nav-item").click(function () {
+          $(".menu-burger__header").toggleClass("open-menu");
+          $(".header-nav").toggleClass("open-menu");
+          $("body").toggleClass("fixed-page");
+        });
       });
     </script>
   </body>
